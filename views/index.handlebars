@@ -23,15 +23,15 @@
 	<div class="container">
 		<h1>My HCI Friends</h1>
 
-		<div class="friends">
-		<ul>
-		{{#each friends}}
-			<li><img src="{{imageURL}}" alt="friend's picture"></li>
-			<li><h3>{{name}}</h3></li>
-			<li><p>{{description}}</p></li>
-		{{/each}}
-		</ul>
-
+		<div class="friend-group">
+		
+			{{#each friends}}
+				<img class="img-responsive" src="{{imageURL}}" alt="friend's picture">
+				<h3><a href="#">{{name}}</a></h3>
+				<p>{{description}}</p>
+				<hr>
+			{{/each}}
+		
 		</div>
 
 		<form id="addFriendForm" role="form" method="get" action="/add">
